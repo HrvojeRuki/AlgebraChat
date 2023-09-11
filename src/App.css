@@ -1,0 +1,156 @@
+body {
+  background-image: url("./img/EM_Background.png");
+  background-position: center ;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100vh; 
+
+}
+.Input {
+ position: fixed;
+  bottom: 10px;
+  width: 100%;
+  padding:20px;
+  border-radius: 20%;
+  height: 5%;  
+}
+input:focus {
+  outline: none;
+}
+
+.Messages-list {
+  padding: 20px 10px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  list-style: none;
+  padding-left: 0;
+  flex-grow: 1;
+  overflow: auto;
+  height: 600px;
+  overflow-anchor: none;
+
+} 
+
+
+.Messages-message {
+  display: flex;
+  margin-top: 3px;
+
+
+}
+.Messages-message.currentMember {
+  justify-content: flex-end;
+  flex-direction: row;
+  text-align: center; 
+}
+.Message-content {
+  display: table-row;
+  transition: .2s;
+  font-size: 12px;
+  text-align: center;
+}
+
+ .Message-content>.username {
+  display: block;
+  color: rgb(26, 23, 23);
+  font-size: 12px;
+  padding-bottom: 3px;
+} 
+.Message-content>.text {
+  padding: 10px;
+  max-width: 400px;
+  margin: 0;
+  background-color: rgb(93, 103, 117);
+  color: rgb(15, 14, 14);
+  display: inline-block;
+
+}
+.currentMember>.Message-content .text {
+  background-color: rgb(36, 33, 33);
+}
+form {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  max-width: 30%;
+  margin: 0 auto 40px;
+}
+input {
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 8px;
+  flex-grow: 1;
+  border: 1px solid rgb(122, 126, 128);
+  box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.188);
+}
+button {
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: rgb(48, 50, 51);
+  color: rgb(211, 206, 206);
+  border: none;
+  border-radius: 8px;
+  margin-left: 10px;
+  border: 1px solid transparent;
+  transition: .2s;
+}
+button:disabled {
+  background-color: rgba(255, 68, 0, .5);
+  color: rgba(255, 255, 255, .5);
+  transition: .2s;
+}
+button:hover {
+  background-color: transparent;
+  color: rgb(12, 15, 158);
+  border: 1px solid rgb(34, 78, 107);
+  transform: scale(1.1);
+  transition: .2s;
+}
+.Login {
+  padding: 10px 20px 40px; 
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff15;
+  border-radius: 0 10px 10px 0;
+  align-items: center;
+}
+h1 {
+  text-align: center;
+  color: rgb(88, 90, 92);
+}
+.EnterUsername {
+  min-width: 30%;
+}
+.username {
+  padding-top: 5px;
+}
+@media screen and (max-width: 480px) {
+  .App {
+    height: 60px;
+  }
+
+  .App-title {
+    padding-top: 15px;
+  }
+
+  
+  h1 {
+    font-size: 1em;
+  }
+
+  input,
+  input::placeholder {
+    font-size: .9em;
+  }
+
+}
